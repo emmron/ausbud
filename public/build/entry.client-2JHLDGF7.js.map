@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../app/entry.client.tsx"],
+  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app/entry.client.tsx\"\n);\n\n}\n// REMIX HMR END\n\nimport * as React from \"react\";\nimport { RemixBrowser } from \"@remix-run/react\";\nimport { hydrateRoot } from \"react-dom/client\";\nimport \"./styles/global.css?__remix_sideEffect__\";\n\nhydrateRoot(document, <RemixBrowser />);"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAaA,oBAA4B;AAGN;AAdtB,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AAEA;AAAA,IAQA,2BAAY,UAAU,mDAAC,kBAAD;AAAA;AAAA;AAAA;AAAA,OAAc,CAAE;",
+  "names": []
+}
