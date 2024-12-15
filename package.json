@@ -1,11 +1,12 @@
 {
   "name": "ausbud",
   "version": "1.0.0",
-  "description": "Medical cannabis product finder", 
+  "description": "Medical cannabis product finder",
+  "homepage": "https://<username>.github.io/<repository-name>",
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev", 
+    "dev": "remix dev",
     "start": "remix-serve build/server/index.js",
     "typecheck": "tsc",
     "css:build": "postcss styles --base styles --dir app/styles --env production",

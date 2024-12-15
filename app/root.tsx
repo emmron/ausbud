@@ -6,11 +6,11 @@ import styles from "~/styles/global.css";
 export const meta: MetaFunction = () => {
   return [
     { title: "Ausbud - Australian Medical Cannabis Reviews" },
-    { name: "description", content: "Find and review medical cannabis products in Australia. Get trusted reviews, ratings and information about medicinal cannabis treatments." },
+    { name: "description", content: "Find and review medical cannabis products in Australia." },
     { name: "viewport", content: "width=device-width,initial-scale=1" },
-    { name: "theme-color", content: "#10B981" }, // Using the primary color from CSS vars
+    { name: "theme-color", content: "#10B981" },
     { name: "og:title", content: "Ausbud - Australian Medical Cannabis Reviews" },
-    { name: "og:description", content: "Find and review medical cannabis products in Australia. Get trusted reviews, ratings and information about medicinal cannabis treatments." },
+    { name: "og:description", content: "Find and review medical cannabis products in Australia." },
     { name: "og:type", content: "website" },
   ];
 };
