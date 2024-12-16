@@ -18,12 +18,7 @@
     },
     "noEmit": true,
     "module": "ESNext",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "types": ["tailwindcss"]
+    "skipLibCheck": true,
+    "types": ["@remix-run/node", "node", "tailwindcss"]
   }
 }

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/react";
 import Header from "~/components/Header";
 import styles from "~/styles/app.css";
 import Products from "./_layout.products";

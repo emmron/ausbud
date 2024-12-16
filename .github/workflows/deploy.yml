@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -31,6 +33,7 @@ jobs:
           mkdir -p build/client
           cp -r build/* build/client/ || true
           touch build/client/.nojekyll
+          echo "ausbud.com" > build/client/CNAME
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
@@ -39,3 +42,4 @@ jobs:
           folder: build/client
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
+          single-commit: true
