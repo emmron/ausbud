@@ -6,6 +6,5 @@ export default {
   appDirectory: "app",
   assetsBuildDirectory: "build/client",
   publicPath: "/ausbud/build/",
-  serverBuildPath: "build/server/index.js",
-  devServerPort: 8002
+  serverBuildPath: "build/server/index.js"
 }; 

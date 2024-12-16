@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run prepare-client",
     "deploy": "gh-pages -d build/client -t true -b gh-pages",
-    "prepare-client": "mkdir -p build/client && cp -r public/* build/client/ && cp -r build/* build/client/ || true",
+    "prepare-client": "mkdir -p build/client && cp -r public/* build/client/ && cp -r build/* build/client/ && touch build/client/.nojekyll",
     "dev": "remix dev",
     "start": "remix-serve build/server/index.js",
     "typecheck": "tsc"

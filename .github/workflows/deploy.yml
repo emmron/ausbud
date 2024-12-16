@@ -7,9 +7,14 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,11 +24,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: |
-          npm install
-          npm install @remix-run/node @types/react @types/react-dom --save-dev
+        run: npm ci
 
       - name: Build
         run: |
@@ -33,13 +37,16 @@ jobs:
           cp -r build/* build/client/ || true
           touch build/client/.nojekyll
         env:
-          CI: false
           NODE_ENV: production
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          folder: build/client
-          branch: gh-pages
-          clean: true
-          single-commit: true
+          path: build/client
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
