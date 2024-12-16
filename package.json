@@ -5,8 +5,8 @@
   "homepage": "https://emmron.github.io/ausbud",
   "type": "module",
   "scripts": {
-    "build": "remix build --sourcemap && mkdir -p build/client && cp -r public/* build/client/",
-    "copy-files": "cp build/index.html build/404.html && cp build/index.html build/client/index.html && cp build/404.html build/client/404.html",
+    "build": "remix build --sourcemap && npm run prepare-client",
+    "prepare-client": "mkdir -p build/client && cp -r public/* build/client/ && cp build/index.html build/client/404.html || true",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build/client",
     "dev": "remix dev",

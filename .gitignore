@@ -41,8 +41,8 @@ Thumbs.db
 
 # Remix specific
 /.cache
-/build
-/public/build
+/build/*
+!/build/client/
 .env
 
 # Temporary files

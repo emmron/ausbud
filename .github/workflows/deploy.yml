@@ -5,6 +5,9 @@ on:
     branches:
       - main  # or master, depending on your default branch
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -26,7 +29,7 @@ jobs:
       - name: Prepare deployment
         run: |
           mkdir -p build/client
-          cp -r build/* build/client/
+          cp -r build/* build/client/ || true
           touch build/client/.nojekyll
 
       - name: Deploy
@@ -35,3 +38,4 @@ jobs:
           branch: gh-pages
           folder: build/client
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
