@@ -3,6 +3,8 @@ import { Links, LiveReload, Meta, Outlet, Scripts } from "@remix-run/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import styles from "~/styles/global.css";
 
+const BASE_URL = "/ausbud";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "Ausbud - Australian Medical Cannabis Reviews" },
@@ -16,9 +18,9 @@ export const meta: MetaFunction = () => {
 };
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
-  { rel: "icon", href: "/favicon.ico" },
-  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+  { rel: "stylesheet", href: `${BASE_URL}${styles}` },
+  { rel: "icon", href: `${BASE_URL}/favicon.ico` },
+  { rel: "apple-touch-icon", href: `${BASE_URL}/apple-touch-icon.png` },
 ];
 
 export default function App() {
