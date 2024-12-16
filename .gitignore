@@ -27,8 +27,6 @@ yarn-error.log*
 .vscode
 *.swp
 *.swo
-*.sublime-workspace
-*.sublime-project
 
 # OS generated files
 .DS_Store
@@ -44,6 +42,10 @@ Thumbs.db
 /build/*
 !/build/client/
 .env
+
+# Git
+.git
+.gitmodules
 
 # Temporary files
 *.log
@@ -74,7 +76,3 @@ Thumbs.db
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
-
-# Git submodules
-.gitmodules
-.git/modules/

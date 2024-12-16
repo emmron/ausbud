@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import type { LinkDescriptor } from "@remix-run/server-runtime";
+import type { LinksFunction } from "@remix-run/node";
 import Header from "~/components/Header";
 import styles from "~/styles/app.css";
 import Products from "./_layout.products";
 
-export const links = (): LinkDescriptor[] => [
+export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles }
 ];
 

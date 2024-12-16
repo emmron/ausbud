@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # or master, depending on your default branch
+      - master
 
 permissions:
   contents: write
@@ -14,35 +14,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          submodules: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install @remix-run/node @types/react @types/react-dom --save-dev
 
       - name: Build
-        run: npm run build
-        env:
-          CI: false
-
-      - name: Prepare deployment
         run: |
+          npm run build
           mkdir -p build/client
+          cp -r public/* build/client/
           cp -r build/* build/client/ || true
           touch build/client/.nojekyll
-          echo "ausbud.com" > build/client/CNAME
+        env:
+          CI: false
+          NODE_ENV: production
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
           folder: build/client
+          branch: gh-pages
           clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
           single-commit: true

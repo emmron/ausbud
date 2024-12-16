@@ -5,16 +5,13 @@
   "homepage": "https://emmron.github.io/ausbud",
   "type": "module",
   "scripts": {
-    "build": "remix build --sourcemap && npm run prepare-client",
-    "prepare-client": "mkdir -p build/client && cp -r public/* build/client/ && cp build/index.html build/client/404.html || true",
+    "build": "remix build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build/client",
+    "deploy": "gh-pages -d build/client -t true -b gh-pages",
+    "prepare-client": "mkdir -p build/client && cp -r public/* build/client/ && cp -r build/* build/client/ || true",
     "dev": "remix dev",
     "start": "remix-serve build/server/index.js",
-    "typecheck": "tsc",
-    "css:build": "postcss styles --base styles --dir app/styles --env production",
-    "css:dev": "postcss styles --base styles --dir app/styles -w",
-    "update": "npm outdated && npm update"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@remix-run/cloudflare-pages": "2.3.1",
