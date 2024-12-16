@@ -43,12 +43,11 @@ var global_default = "/build/_assets/global-65YCYJUG.css";
 import { jsxDEV as jsxDEV2 } from "react/jsx-dev-runtime";
 var meta = () => [
   { title: "Ausbud - Australian Medical Cannabis Reviews" },
-  { name: "description", content: "Find and review medical cannabis products in Australia. Get trusted reviews, ratings and information about medicinal cannabis treatments." },
+  { name: "description", content: "Find and review medical cannabis products in Australia." },
   { name: "viewport", content: "width=device-width,initial-scale=1" },
   { name: "theme-color", content: "#10B981" },
-  // Using the primary color from CSS vars
   { name: "og:title", content: "Ausbud - Australian Medical Cannabis Reviews" },
-  { name: "og:description", content: "Find and review medical cannabis products in Australia. Get trusted reviews, ratings and information about medicinal cannabis treatments." },
+  { name: "og:description", content: "Find and review medical cannabis products in Australia." },
   { name: "og:type", content: "website" }
 ], links = () => [
   { rel: "stylesheet", href: global_default },
@@ -1168,7 +1167,7 @@ __export(layout_exports, {
   default: () => layout_default,
   links: () => links2
 });
-import { Outlet as Outlet2 } from "@remix-run/react";
+import { Outlet as Outlet2, Navigate } from "react-router-dom";
 
 // app/components/Header.tsx
 import { useState as useState4, useEffect } from "react";
@@ -1379,109 +1378,17 @@ var app_default = "/build/_assets/app-AHQKGZPK.css";
 import { Fragment, jsxDEV as jsxDEV9 } from "react/jsx-dev-runtime";
 var links2 = () => [
   { rel: "stylesheet", href: app_default }
-], Layout = () => {
-  let currentYear = (/* @__PURE__ */ new Date()).getFullYear();
-  return /* @__PURE__ */ jsxDEV9(Fragment, { children: /* @__PURE__ */ jsxDEV9("div", { className: "min-h-screen flex flex-col bg-gray-50", children: [
-    /* @__PURE__ */ jsxDEV9(Header_default, {}, void 0, !1, {
-      fileName: "app/routes/_layout.tsx",
-      lineNumber: 18,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV9("main", { className: "flex-grow pt-20 pb-12", children: /* @__PURE__ */ jsxDEV9("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxDEV9(Products, {}, void 0, !1, {
-        fileName: "app/routes/_layout.tsx",
-        lineNumber: 22,
-        columnNumber: 13
-      }, this),
-      /* @__PURE__ */ jsxDEV9(Outlet2, {}, void 0, !1, {
-        fileName: "app/routes/_layout.tsx",
-        lineNumber: 23,
-        columnNumber: 13
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_layout.tsx",
-      lineNumber: 21,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_layout.tsx",
-      lineNumber: 20,
-      columnNumber: 9
-    }, this),
-    /* @__PURE__ */ jsxDEV9("footer", { className: "bg-white border-t py-12", children: /* @__PURE__ */ jsxDEV9("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxDEV9("div", { className: "flex flex-col md:flex-row justify-between items-center gap-8", children: [
-      /* @__PURE__ */ jsxDEV9("div", { className: "text-center md:text-left space-y-2", children: [
-        /* @__PURE__ */ jsxDEV9("h3", { className: "text-xl font-semibold text-primary", children: "Ausbud" }, void 0, !1, {
-          fileName: "app/routes/_layout.tsx",
-          lineNumber: 30,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV9("p", { className: "text-gray-600", children: [
-          "\xA9 ",
-          currentYear,
-          " Australian Medical Cannabis Reviews"
-        ] }, void 0, !0, {
-          fileName: "app/routes/_layout.tsx",
-          lineNumber: 31,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV9("p", { className: "text-sm text-gray-500", children: "Helping patients make informed decisions" }, void 0, !1, {
-          fileName: "app/routes/_layout.tsx",
-          lineNumber: 32,
-          columnNumber: 17
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_layout.tsx",
-        lineNumber: 29,
-        columnNumber: 15
-      }, this),
-      /* @__PURE__ */ jsxDEV9("div", { className: "text-center md:text-right space-y-3", children: [
-        /* @__PURE__ */ jsxDEV9("div", { className: "inline-flex items-center justify-center px-4 py-2 bg-primary/10 rounded-lg", children: /* @__PURE__ */ jsxDEV9("p", { className: "text-sm text-primary font-medium", children: "For registered medical cannabis patients only" }, void 0, !1, {
-          fileName: "app/routes/_layout.tsx",
-          lineNumber: 38,
-          columnNumber: 19
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/_layout.tsx",
-          lineNumber: 37,
-          columnNumber: 17
-        }, this),
-        /* @__PURE__ */ jsxDEV9("p", { className: "text-sm text-gray-500", children: "Always consult your healthcare provider before making changes to your treatment" }, void 0, !1, {
-          fileName: "app/routes/_layout.tsx",
-          lineNumber: 42,
-          columnNumber: 17
-        }, this)
-      ] }, void 0, !0, {
-        fileName: "app/routes/_layout.tsx",
-        lineNumber: 36,
-        columnNumber: 15
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/routes/_layout.tsx",
-      lineNumber: 28,
-      columnNumber: 13
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_layout.tsx",
-      lineNumber: 27,
-      columnNumber: 11
-    }, this) }, void 0, !1, {
-      fileName: "app/routes/_layout.tsx",
-      lineNumber: 26,
-      columnNumber: 9
-    }, this)
-  ] }, void 0, !0, {
-    fileName: "app/routes/_layout.tsx",
-    lineNumber: 17,
-    columnNumber: 7
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/_layout.tsx",
-    lineNumber: 16,
-    columnNumber: 5
-  }, this);
-}, layout_default = Layout;
+], Layout = () => /* @__PURE__ */ jsxDEV9(Navigate, { to: "/login", replace: !0 }, void 0, !1, {
+  fileName: "app/routes/_layout.tsx",
+  lineNumber: 17,
+  columnNumber: 12
+}, this), layout_default = Layout;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-2JHLDGF7.js", imports: ["/build/_shared/chunk-O4BRYNJ4.js", "/build/_shared/chunk-KJIC5NSH.js", "/build/_shared/chunk-U4FRFQSK.js", "/build/_shared/chunk-IKJ3I24Q.js", "/build/_shared/chunk-MZF3CFPM.js", "/build/_shared/chunk-XGOTYLZ5.js", "/build/_shared/chunk-7M6SC7J5.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MSLYLXIJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !0 }, "routes/_layout": { id: "routes/_layout", parentId: "root", path: void 0, index: void 0, caseSensitive: void 0, module: "/build/routes/_layout-DP273KTD.js", imports: ["/build/_shared/chunk-5LBRYOUZ.js"], hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_layout._index": { id: "routes/_layout._index", parentId: "routes/_layout", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_layout._index-O4X5GF6A.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.learn": { id: "routes/_layout.learn", parentId: "routes/_layout", path: "learn", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.learn-P7GUP2CI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.products": { id: "routes/_layout.products", parentId: "routes/_layout", path: "products", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.products-3ZDNGQDY.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.profile": { id: "routes/_layout.profile", parentId: "routes/_layout", path: "profile", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.profile-4Y66JRFA.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.reviews": { id: "routes/_layout.reviews", parentId: "routes/_layout", path: "reviews", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.reviews-2ZQSUHZC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasClientAction: !1, hasClientLoader: !1, hasErrorBoundary: !1 } }, version: "3d33ceb1", hmr: { runtime: "/build/_shared/chunk-IKJ3I24Q.js", timestamp: 1734269670621 }, url: "/build/manifest-3D33CEB1.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-3Z4U7Y2A.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-G7Q2JOA3.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-IKJ3I24Q.js", "/build/_shared/chunk-MZF3CFPM.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-Y42UYT4B.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/_layout": { id: "routes/_layout", parentId: "root", path: void 0, index: void 0, caseSensitive: void 0, module: "/build/routes/_layout-TENN4ASQ.js", imports: ["/build/_shared/chunk-F4PR3XHL.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_layout._index": { id: "routes/_layout._index", parentId: "routes/_layout", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_layout._index-6YNUAZ57.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.learn": { id: "routes/_layout.learn", parentId: "routes/_layout", path: "learn", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.learn-WAZKJ5KN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.products": { id: "routes/_layout.products", parentId: "routes/_layout", path: "products", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.products-Y7XS3UNA.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.profile": { id: "routes/_layout.profile", parentId: "routes/_layout", path: "profile", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.profile-QVCQMM7C.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_layout.reviews": { id: "routes/_layout.reviews", parentId: "routes/_layout", path: "reviews", index: void 0, caseSensitive: void 0, module: "/build/routes/_layout.reviews-WLNXUASN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "08a1a42a", hmr: { runtime: "/build/_shared/chunk-IKJ3I24Q.js", timestamp: 1734272631673 }, url: "/build/manifest-08A1A42A.js" };
 
 // server-entry-module:@remix-run/dev/server-build
-var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1, v3_relativeSplatPath: !1, v3_throwAbortReason: !1, v3_routeConfig: !1, v3_singleFetch: !1, v3_lazyRouteDiscovery: !1, unstable_optimizeDeps: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
+var mode = "development", assetsBuildDirectory = "public/build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
   root: {
     id: "root",
     parentId: void 0,

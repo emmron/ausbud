@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Outlet } from "@remix-run/react";
+import { Outlet, Navigate } from "react-router-dom";
 import { LinksFunction } from "@remix-run/node";
 import Header from "~/components/Header";
 import styles from "~/styles/app.css";
@@ -10,6 +10,13 @@ export const links: LinksFunction = () => [
 ];
 
 const Layout: React.FC = () => {
+  const isAuthenticated = false; // Replace with actual authentication logic
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+
   const currentYear = new Date().getFullYear();
 
   return (
