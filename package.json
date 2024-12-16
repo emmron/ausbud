@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@remix-run/cloudflare-pages": "2.3.1",
-    "@remix-run/react": "2.3.1",
+    "@remix-run/node": "^2.15.1",
+    "@remix-run/react": "^2.3.1",
     "isbot": "4.1.0",
     "postcss": "8.4.32",
     "postcss-cli": "10.1.0",
@@ -23,8 +24,8 @@
     "postcss-preset-env": "7.8.3",
     "preact": "^10.19.3",
     "preact-router": "^4.1.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^7.0.2",
     "zustand": "4.4.7"
   },
