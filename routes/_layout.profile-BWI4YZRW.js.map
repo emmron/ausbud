@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_layout.profile.tsx"],
+  "sourcesContent": ["import * as React from \"react\";\nimport { useState } from \"react\";\n\nexport default function Profile() {\n  const [user] = useState({\n    name: 'John Doe',\n    email: 'john@example.com',\n    reviews: 5,\n    joinDate: '2024-01-01'\n  });\n\n  return (\n    <div className=\"profile\">\n      <h2>My Profile</h2>\n      <div className=\"profile-info\">\n        <div className=\"profile-section\">\n          <h3>Personal Information</h3>\n          <p>Name: {user.name}</p>\n          <p>Email: {user.email}</p>\n          <p>Member since: {user.joinDate}</p>\n          <p>Reviews written: {user.reviews}</p>\n        </div>\n        <div className=\"profile-section\">\n          <h3>My Reviews</h3>\n        </div>\n      </div>\n    </div>\n  );\n} "],
+  "mappings": "oEACA,IAAAA,EAAyB,SAYnBC,EAAA,SAVS,SAARC,GAA2B,CAChC,GAAM,CAACC,CAAI,KAAI,YAAS,CACtB,KAAM,WACN,MAAO,mBACP,QAAS,EACT,SAAU,YACZ,CAAC,EAED,SACE,QAAC,OAAI,UAAU,UACb,oBAAC,MAAG,sBAAU,KACd,QAAC,OAAI,UAAU,eACb,qBAAC,OAAI,UAAU,kBACb,oBAAC,MAAG,gCAAoB,KACxB,QAAC,KAAE,mBAAOA,EAAK,MAAK,KACpB,QAAC,KAAE,oBAAQA,EAAK,OAAM,KACtB,QAAC,KAAE,2BAAeA,EAAK,UAAS,KAChC,QAAC,KAAE,8BAAkBA,EAAK,SAAQ,GACpC,KACA,OAAC,OAAI,UAAU,kBACb,mBAAC,MAAG,sBAAU,EAChB,GACF,GACF,CAEJ",
+  "names": ["import_react", "import_jsx_runtime", "Profile", "user"]
+}

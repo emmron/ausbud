@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_layout._index.tsx"],
+  "sourcesContent": ["import * as React from \"react\";\n\nexport default function Index() {\n  return (\n    <div className=\"home\">\n      <h1>Welcome to Ausbud</h1>\n      <p>Your trusted source for medicinal cannabis reviews in Australia</p>\n      <div className=\"features\">\n        <div className=\"feature\">\n          <h3>Browse Products</h3>\n          <p>Explore available medicinal cannabis products</p>\n        </div>\n        <div className=\"feature\">\n          <h3>Read Reviews</h3>\n          <p>Learn from other patients' experiences</p>\n        </div>\n        <div className=\"feature\">\n          <h3>Share Experience</h3>\n          <p>Help others by sharing your own reviews</p>\n        </div>\n      </div>\n    </div>\n  );\n} "],
+  "mappings": "6DAKM,IAAAA,EAAA,SAHS,SAARC,GAAyB,CAC9B,SACE,QAAC,OAAI,UAAU,OACb,oBAAC,MAAG,6BAAiB,KACrB,OAAC,KAAE,2EAA+D,KAClE,QAAC,OAAI,UAAU,WACb,qBAAC,OAAI,UAAU,UACb,oBAAC,MAAG,2BAAe,KACnB,OAAC,KAAE,yDAA6C,GAClD,KACA,QAAC,OAAI,UAAU,UACb,oBAAC,MAAG,wBAAY,KAChB,OAAC,KAAE,kDAAsC,GAC3C,KACA,QAAC,OAAI,UAAU,UACb,oBAAC,MAAG,4BAAgB,KACpB,OAAC,KAAE,mDAAuC,GAC5C,GACF,GACF,CAEJ",
+  "names": ["import_jsx_runtime", "Index"]
+}
