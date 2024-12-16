@@ -23,8 +23,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Create .nojekyll file
-        run: touch build/client/.nojekyll
+      - name: Prepare deployment
+        run: |
+          mkdir -p build/client
+          cp -r build/* build/client/
+          touch build/client/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

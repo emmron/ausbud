@@ -5,7 +5,8 @@
   "homepage": "https://emmron.github.io/ausbud",
   "type": "module",
   "scripts": {
-    "build": "remix build && cp build/index.html build/404.html",
+    "build": "remix build --sourcemap && mkdir -p build/client && cp -r public/* build/client/",
+    "copy-files": "cp build/index.html build/404.html && cp build/index.html build/client/index.html && cp build/404.html build/client/404.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build/client",
     "dev": "remix dev",
@@ -36,7 +37,7 @@
     "@types/react": "18.2.45",
     "@types/react-dom": "18.2.18",
     "concurrently": "8.2.2",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.2.0",
     "tailwindcss": "3.3.6",
     "typescript": "5.3.3",
     "wrangler": "3.21.0"
