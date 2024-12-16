@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Links, LiveReload, Meta, Outlet, Scripts } from "@remix-run/react";
-import type { LinksFunction, MetaFunction } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/react";
+import type { LinkDescriptor } from "@remix-run/server-runtime";
 import styles from "~/styles/global.css";
 
 const BASE_URL = "/ausbud";
@@ -17,7 +18,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const links: LinksFunction = () => [
+export const links = (): LinkDescriptor[] => [
   { rel: "stylesheet", href: `${BASE_URL}${styles}` },
   { rel: "icon", href: `${BASE_URL}/favicon.ico` },
   { rel: "apple-touch-icon", href: `${BASE_URL}/apple-touch-icon.png` },

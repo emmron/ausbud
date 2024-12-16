@@ -19,6 +19,6 @@
     "noEmit": true,
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["@remix-run/node", "node", "tailwindcss"]
+    "types": ["node", "react", "react-dom"]
   }
 }
